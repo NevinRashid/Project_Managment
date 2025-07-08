@@ -35,8 +35,8 @@ class CreateNotification
         $notification =[];
         $notification['user_id'] = $event->task->assigned_user_id ;
         $notification['type'] = 'task_assigned';
-        $notification['data'] ='$data';
-        $notification['read_at'] = now() ;
+        $notification['data'] =$data;
+        $notification['read_at'] = null ;
 
         $notificationResult = $this->notificationService->createNotification($notification);
         $event->notification =$notificationResult;
