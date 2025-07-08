@@ -68,8 +68,8 @@ class SendNotification
             $notification =[];
             $notification['user_id'] = $recipient ;
             $notification['type'] = 'comment_created';
-            $notification['data'] ='$data';
-            $notification['read_at'] = now() ;
+            $notification['data'] =$data;
+            $notification['read_at'] = null ;
             $notificationResult= $this->notificationService->createNotification($notification);
             SendCommentEmailJob::dispatch($notificationResult);
         }
