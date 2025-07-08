@@ -1,0 +1,104 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Traits\HandleServiceErrors;
+
+class {{ class }}
+{
+    use HandleServiceErrors;
+    /**
+     * Create a new class instance.
+     */
+    public function __construct()
+    {
+        // 
+    }
+
+    /**
+     * Get all objects from database
+     *
+     * @return array $arraydata
+     */
+    public function getAllObjects()
+    {
+        try{
+                return ;
+
+        } catch(\Throwable $th){
+            return $this->error("An error occurred",500, $th->getMessage());
+        }
+    }
+
+    /**
+     * Get a single object with its relationships.
+     *
+     * @param  Model $var
+     *
+     * @return Model $var
+     */
+    public function showObject(Model $var)
+    {
+        try{
+            return ;
+
+        } catch(\Throwable $th){
+            return $this->error("An error occurred",500, $th->getMessage());
+        }
+    }
+
+    /**
+     * Add new object to the database.
+     * 
+     * @param array $arraydata
+     * 
+     * @return Model $var
+     */
+    public function createObject(array $data)
+    {
+        try{
+            return ;
+
+        } catch(\Throwable $th){
+
+        }    
+    }
+
+    /**
+     * Update the specified object in the database.
+     * 
+     * @param array $arraydata
+     * @param Model $var
+     * 
+     * @return Model $var
+     */
+
+    public function updateObject(array $data, Model $var){
+        try{
+            $var->update(array_filter($data));
+            return $var;
+
+        } catch(\Throwable $th){
+            return $this->error("An error occurred",500, $th->getMessage());
+        }
+    }
+
+    /**
+     * Delete the specified object from the database.
+     *
+     * @param Model $var
+     * 
+     * @return Model $var
+     */
+
+    public function deleteObject(Model $var){
+        try{
+            
+            return ;
+
+        } catch(\Throwable $th){
+            return $this->error("An error occurred",500, $th->getMessage());
+        }
+    }
+
+}
