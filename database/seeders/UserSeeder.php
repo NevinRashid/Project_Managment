@@ -19,14 +19,7 @@ class UserSeeder extends Seeder
             'password'  => '123456789',  
         ]);
         $admin->assignRole('admin');  
-
-        $team_owner = User::firstOrCreate([
-            'name'      => 'rashid',
-            'email'     => 'rashid@gmail.com',
-            'password'  => '123456789',  
-        ]);
-        $team_owner->assignRole('team_owner');  
-
+        
         $project_manager = User::firstOrCreate([
             'name'      => 'mohamad',
             'email'     => 'mohamad@gmail.com',
